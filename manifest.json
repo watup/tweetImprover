@@ -1,0 +1,27 @@
+{
+  "name": "Tweet Improver",
+  "description": "This will fix all your dumb tweets",
+  "version": "2.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["jquery-2.1.0.min.js","background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Improve your dumb tweets now",
+	"default_icon": {
+      "19": "TI19.png",
+      "38": "TI38.png"
+    }
+  },
+  "icons": { "16": "TI16.png",
+           "48": "TI48.png",
+          "128": "TI128.png" },
+  "manifest_version": 2,
+  "content_scripts": [ {
+    "js": [ "jquery-2.1.0.min.js", "background.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
